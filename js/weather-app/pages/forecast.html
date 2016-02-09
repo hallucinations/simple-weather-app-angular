@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Forecast for <small> {{ city }}</small></h1>
+</div>
+<nav>
+    <ul class="pagination">
+        <li class='disabled'><a aria-label="Previous"><strong>Days</strong></a></li>
+        <li ng-class="{ active: days === '2' }"><a href="#/forecast/2">2</a></li>
+        <li ng-class="{ active: days === '5' }"><a href="#/forecast/5">5</a></li>
+        <li ng-class="{ active: days === '7' }"><a href="#/forecast/7">7</a></li>
+        <li ng-class="{ active: days === '9' }"><a href="#/forecast/9">9</a></li>
+    </ul>
+</nav>
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+           <forecast-result weather-day='w'
+                convert-to-standard='convertToCelsius(dayTimeTemp)' 
+                convert-to-date='convertToDate(aDate)' date-format='MMM dd, yyyy'></forecast-result>
+        </div>
+    </div>
+</div>

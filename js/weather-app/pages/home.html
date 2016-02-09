@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Forecast by City</h4>
+        <form ng-submit="getForecast()">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="city" />
+            </div>
+            <input type="submit" value="Get Forecast" class="btn btn-primary" />
+            <input type="button" value="Display Graph for the week" class="btn btn-info" ng-click="showGraph()" />
+        </form>
+    </div>
+</div>
